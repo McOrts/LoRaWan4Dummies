@@ -13,3 +13,17 @@ La tecnología cada vez es más fácil de usar. Hasta hace poco, la construcció
 Si quieres participar plenamente en este taller y llevarte tu sensor funcionando. Te sugerimos que compres las siguientes placas con anticipación. Aquí tienes los sitios más baratos que hemos encontrado:
 * **IOT Micro**: [Bit Lora nodo (frecuencia EU 868 - 870 MHz)](https://ebay.us/Abt9Uj)
 * **BBC micro:bit** [bulk micro-controller with motion detection, compass, LED display and Bluetooth](https://a.aliexpress.com/_d6tASCS)
+
+## Ejercicio 1: "Hola mundo" 
+asdad 
+
+## Ejercicio 2: Sensor de movimiento
+Conectando nuestro Micro:bit
+Install Scratch Link
+1
+Download and install Scratch Link.
+
+or
+Direct download
+2
+Start Scratch Link and make sure it is running. It should appear in your toolbar.
