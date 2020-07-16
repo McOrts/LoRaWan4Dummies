@@ -4,7 +4,8 @@ La tecnología cada vez es más fácil de usar. Hasta hace poco, la construcció
 <img src="images/Taller_LoRaWan4Dummies.png" align="right"/>
 
 ## En este taller vamos a
-* Construir un multisensor para que nos envíe a nuestro móvil datos de movimiento, temperatura, luz y posición desde casi cualquier parte del mundo y sin coste.
+* Saber qué son y para qué sirven las comunicaciones LoRaWan. 
+Construir un multisensor para que nos envíe a nuestro móvil datos de movimiento, temperatura, luz y posición desde casi cualquier parte del mundo y sin coste.
 * Aprender a programar en Scratch
 * Aprender a configurar un nodo en The Things Networks
 * Aprender a enviar alertas a tu móvil
