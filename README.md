@@ -43,23 +43,30 @@ Existe un servicio que representa un mapa de alcance y intensidad de señal de l
 <img src="images/ttnmapper.png" align="center"/>
 
 ## 1º Conectamos todo
-
-La única aplicación que necesitaremos en el ordenador es un navegador de internet. Recomiendo Chrome. 
+La única aplicación que necesitaremos en el ordenador es un navegador de internet para lo que se recomienda Google Chrome. 
 Abrimos el buscador Google para encontrar la aplicación web: **Makecode Microbit** [La dirección actual es https://makecode.microbit.org/](https://makecode.microbit.org/)
 
 Una vez dentro de la aplicación podremos **cambiar el idioma** Desde el icono de configuración situado arriba a la derecha.
 <img src="./images/makecodemicrobitorg_home.png"  align="center" />
 
-En esta pantalla principal seleccionaremos *Nuevo Proyecto* y ejegimos un nombre. Ahora es el momento de conectar todo incluyendo el cable USB con tu PC. Si al enchufarlo se te muestra algún mensaje de instalar o actualizar controladores (drives), acepta y continúa hasta completar la instalación.
+En esta pantalla principal seleccionaremos *Nuevo Proyecto* y elegimos un nombre. 
 
+Ahora es el momento de conectar todo incluyendo el cable USB con tu PC. **IMPORTANTE** Asegurate primero de tener la antena conectada a la placa LoRa. Emitir señal sin antena puede sobrecargar el circuito. Si al enchufarlo se te muestra algún mensaje de instalar o actualizar controladores (drives), acepta y continúa hasta completar la instalación.
+
+<img src="images/MicroBit_emparejar_makecode.png" width="150" align="left"/>
 Ahora es el momento de activar el dispositivo. De nuevo, desde en icono de configuración, selecciona la opción de emparejar dispositivo (Pair Device). Aparecerá una ventana con la misma opción de nuevo.
-Y con esto tú MicroBit ya estará preparada para programarse.
+Si la matriz de LEDs muestra muestra las letras "lora " desplaz'andose, tu MicroBit LoRa ya estará preparado para programarse. 
 
 ## Ejercicio 1: "Hola mundo" 
+El lenguaje que vamos a utilizar es, posiblemente uno de los mas sencillos que existen, el [Scratch](https://scratch.mit.edu/). Que es un lenguaje de programación visual pero muy completo y orientado a la educación y a la robótica que ha sido desarrollado por el _MIT Media Lab_. 
 
+En la configuración inicial del nuestro entorno de programación no hay funciones de comunicación LoRa. Por lo que tendremos que añadir esta libreria. De nuevo desde el icono de configuración buscaremos:
+<img src="./images/Extension_LoRa_Scratch.png"  align="center" />
 
+<img src="./images/Taller_LoRaWan4Dummies.png"  align="left" />
+Ahora ya podemos empezar a programar. Lo primero será añadir los proques para inializar e identificar nuestro dispositivo en la red LoRaWAn de TTN.
 
-## Registro del sensor en la nube TTN
+### Registro del sensor en la nube TTN
 Vamos a utilizar los servicios de TTN que enrutarán el mensaje desde el _gateway_ que reciba por radiofrecuencia el paquete de datos hasta el _endpoint_ que consumirá la aplicación que tome acción con la información contenida en la trama da datos. 
 
 Este dispositivo es del tipo ABP (Activation-by-personalisation) lo que significa que se identificará en la red con un _DevAddr_ y una _Session key_ preconfigurada. Para ello tenemos que completar el registro de una aplicación y un dispositivo. Estos son los pasos a seguir:
