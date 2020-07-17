@@ -47,13 +47,13 @@ La única aplicación que necesitaremos en el ordenador es un navegador de inter
 Abrimos el buscador Google para encontrar la aplicación web: **Makecode Microbit** [La dirección actual es https://makecode.microbit.org/](https://makecode.microbit.org/)
 
 Una vez dentro de la aplicación podremos **cambiar el idioma** Desde el icono de configuración situado arriba a la derecha.
-<img src="./images/makecodemicrobitorg_home.png"  align="center" />
+<img src="./images/makecodemicrobitorg_home.png" align="center" />
 
 En esta pantalla principal seleccionaremos *Nuevo Proyecto* y elegimos un nombre. 
 
 Ahora es el momento de conectar todo incluyendo el cable USB con tu PC. **IMPORTANTE** Asegurate primero de tener la antena conectada a la placa LoRa. Emitir señal sin antena puede sobrecargar el circuito. Si al enchufarlo se te muestra algún mensaje de instalar o actualizar controladores (drives), acepta y continúa hasta completar la instalación.
 
-<img src="images/MicroBit_emparejar_makecode.png" width="150" align="left"/>
+<img src="images/MicroBit_emparejar_makecode.png" width="200" align="left"/>
 Ahora es el momento de activar el dispositivo. De nuevo, desde en icono de configuración, selecciona la opción de emparejar dispositivo (Pair Device). Aparecerá una ventana con la misma opción de nuevo.
 Si la matriz de LEDs muestra muestra las letras "lora " desplaz'andose, tu MicroBit LoRa ya estará preparado para programarse. 
 
@@ -63,7 +63,7 @@ El lenguaje que vamos a utilizar es, posiblemente uno de los mas sencillos que e
 En la configuración inicial del nuestro entorno de programación no hay funciones de comunicación LoRa. Por lo que tendremos que añadir esta libreria. De nuevo desde el icono de configuración buscaremos:
 <img src="./images/Extension_LoRa_Scratch.png"  align="center" />
 
-<img src="./images/Taller_LoRaWan4Dummies.png"  align="left" />
+<img src="./images/SET_dispositivo_TTN.png"  align="left" />
 Ahora ya podemos empezar a programar. Lo primero será añadir los proques para inializar e identificar nuestro dispositivo en la red LoRaWAn de TTN.
 
 ### Registro del sensor en la nube TTN
@@ -72,7 +72,7 @@ Vamos a utilizar los servicios de TTN que enrutarán el mensaje desde el _gatewa
 Este dispositivo es del tipo ABP (Activation-by-personalisation) lo que significa que se identificará en la red con un _DevAddr_ y una _Session key_ preconfigurada. Para ello tenemos que completar el registro de una aplicación y un dispositivo. Estos son los pasos a seguir:
 
 ### Registro de la aplicación
-Los registros se comunican con la aplicación en la que han sido registrados. Para registras un dispositivo, primero hay que añadir una aplicación.
+Nuestro dispositivo se comunicará con la aplicación en la que ha sido registrado. Para registrar un dispositivo por lo tanto, primero hay que añadir una aplicación.
 
 <img src="./images/ttn-add-application.png" width="500" align="right" />
 
@@ -94,33 +94,13 @@ Ahora seremos redirigidos a la página con la nueva aplicación añadida donde p
 En TTN un dispositivo (devide) representa la configuración de lo que también llama nodo (node) que a fin de cuentas es nuestro circuito. 
 Al acceder al formulario de registro, únicamente tenemos que rellenar el _Device ID_ que será el nombre único de este nodo. Es preferible pulsar el icono marcado en la imagen para que se genere automáticamente el _Device EUI_.
 
-<img src="./images/ttn-add-device_params.png" width="400" align="left" />
+<img src="./images/ttn-add-device_settings.png" width="400" align="left" />
+Ahora solo queda cambiar en _settings_ los parámetros de:
+* Poner a ABP el _Activation Method_
+* Desmarcar _Frame Counter Checks_
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-Finalmente pulsaremos _Register_ y pulsaremos el icono con el nombre de nuestro nuevo dispositivo para ver sus datos de configuración. Aquí encontraremos los parámetros que necesitamos por ser un dispositivo de tipo ABP. Y que tendremos que pasar al fichero de configuración settings.h que se cargará en el _sketch_ del IDE de Arduino.
-Pero el formato para las Keys es diferente. Encontrarás aquí una hoja excel (Encode_EUI.xlsx) que te facilitará esta tarea.
-
-```
-// TTN Configuration
-// LoRaWAN NwkSKey, network session key provided by TTN Console (https://console.thethingsnetwork.org) in Device settings form:
-static const PROGMEM u1_t NWKSKEY[16] = {0x8F,0xDA,......};
-// LoRaWAN AppSKey, application session key provided by TTN Console (https://console.thethingsnetwork.org) in Device settings form:
-static const u1_t PROGMEM APPSKEY[16] = {0xE5,0x0A,......};
-// LoRaWAN end-device address (DevAddr)
-static const u4_t DEVADDR = 0x12345678 ; // <-- Change this address for every node!
-
-// Other params
-const int update_time_alive = 150000;
-const int PhotoCell = 2; 
-const int Buzzer = 15;
-```
+<img src="./images/ttn-add-device_params.png" width="400" align="right" />
+Finalmente pulsaremos _Register_ y pulsaremos el icono con el nombre de nuestro nuevo dispositivo para ver sus datos de configuración. Aquí encontraremos los parámetros que necesitamos por ser un dispositivo de tipo ABP que trasladaremos al bloque de configuraciób de Scratch.
 
 ### Formato de la trama
 <img src="./images/ttn-add-payload_format.png" width="400" align="right" />
