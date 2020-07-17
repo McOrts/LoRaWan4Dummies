@@ -12,12 +12,12 @@ La tecnología cada vez es más fácil de usar. Hasta hace poco, la construcció
 
 ## Necesitarás
 Si quieres participar plenamente en este taller y llevarte tu sensor funcionando. Te sugerimos que compres las siguientes placas con anticipación. Aquí tienes los sitios más baratos que hemos encontrado:
-* **BBC micro:bit** [bulk micro-controller with motion detection, compass, LED display and Bluetooth](https://a.aliexpress.com/_d6tASCS)
 <img src="images/BBCmicroBit.png" width="250" align="right"/>
 
-* **IOT Micro**: [Bit Lora nodo (frecuencia EU 868 - 870 MHz)](https://ebay.us/Abt9Uj)
+* **BBC micro:bit** [bulk micro-controller with motion detection, compass, LED display and Bluetooth](https://a.aliexpress.com/_d6tASCS)
 <img src="images/BitLoranodo.png" width="200" align="right"/>
 
+* **IOT Micro**: [Bit Lora nodo (frecuencia EU 868 - 870 MHz)](https://ebay.us/Abt9Uj)
 * **Cable micro-USB** de datos.
 
 ## ¿Que es LoRaWAN y para que sirve?
@@ -26,12 +26,12 @@ Estamos hablando de un tipo de comunicación inalámbrica que permite transmitir
 
 La señal LoRa alcanza fácilmente los 2km en área urbana y más de 10km en zonas rurales. Actualmente el récord tierra-tierra es de 210km con una shield de Arduino de 16$ (febrero 2017) y globo-tierra 832km a principios del 2020 desde Alemania a Países Bajos.
 
-<img src="images/LoRa-logo-transp-400x231-300x173.png¨ width="100" align="left"/>
+<img src="images/LoRa-logo-transp-400x231-300x173.png" width="100" align="left"/>
 
 LoRa es un tipo de modulación de señal de radio desarrollada entre 2008 y 2013 en Francia y adquirida y patentada por la compañía Semtech.
 
 ### ¿Por qué TTN?
-<img src="images/ttn_logo.png¨ width="100" align="left"/>
+<img src="images/ttn_logo.png" width="100" align="left"/>
 
 La vuelta de tuerca a esta solución de interconectividad de dispositivos la ha dado la red [The Things Network](https://www.thethingsnetwork.org). Que ha formado una comunidad abierta de *gateways* y nodos que permite la conectividad de dispositivos IoT sin 3G ni WiFi y sin coste. En realidad solo vamos a pagar el copywrite del chip LoRa de los dispositivos que compremos.
 
@@ -41,13 +41,14 @@ La vuelta de tuerca a esta solución de interconectividad de dispositivos la ha 
 ## 1º Conectamos todo
 
 La única aplicación que necesitaremos en el ordenador es un navegador de internet. Recomiendo Chrome. 
-Abrimos el buscador Google para encontrar la aplicación web: **Makecode Microbit** (La dirección actual es (https://makecode.microbit.org/)[https://makecode.microbit.org/]
+Abrimos el buscador Google para encontrar la aplicación web: **Makecode Microbit** [La dirección actual es (https://makecode.microbit.org/](https://makecode.microbit.org/)
 
-Una vez dentro de la aplicación podremos cambiar el idioma Desde el icono de configuración situado arriba a la derecha.
+Una vez dentro de la aplicación podremos **cambiar el idioma** Desde el icono de configuración situado arriba a la derecha.
+<img src="./images/makecodemicrobitorg_home.png"  align="center" />
 
-En esta pantalla principal seleccionaremos *Nuevo Proyecto*. Ahora es el momento de conectar todo incluyendo el cable USB con tu PC. Si al momento de la enchufarlo, se te muestra algún mensaje de instalar o actualizar controladores (drives) acepta y continúa hasta completar la instalación. 
+En esta pantalla principal seleccionaremos *Nuevo Proyecto* y ejegimos un nombre. Ahora es el momento de conectar todo incluyendo el cable USB con tu PC. Si al enchufarlo se te muestra algún mensaje de instalar o actualizar controladores (drives), acepta y continúa hasta completar la instalación.
 
-Ahora es el momento de activar el dispositivo. De nuevo desde en icono de configuración, selecciona la opción de emparejar dispositivo (Pair Device). Aparecerá una ventana con la misma opción de nuevo.
+Ahora es el momento de activar el dispositivo. De nuevo, desde en icono de configuración, selecciona la opción de emparejar dispositivo (Pair Device). Aparecerá una ventana con la misma opción de nuevo.
 Y con esto tú MicroBit ya estará preparada para programarse.
 
 ## Ejercicio 1: "Hola mundo" 
