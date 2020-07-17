@@ -55,8 +55,71 @@ Y con esto tú MicroBit ya estará preparada para programarse.
 
 
 
+## Registro del sensor en la nube TTN
+Vamos a utilizar los servicios de TTN que enrutarán el mensaje desde el _gateway_ que reciba por radiofrecuencia el paquete de datos hasta el _endpoint_ que consumirá la aplicación que tome acción con la información contenida en la trama da datos. 
+
+Este dispositivo es del tipo ABP (Activation-by-personalisation) lo que significa que se identificará en la red con un _DevAddr_ y una _Session key_ preconfigurada. Para ello tenemos que completar el registro de una aplicación y un dispositivo. Estos son los pasos a seguir:
+
+### Registro de la aplicación
+Los registros se comunican con la aplicación en la que han sido registrados. Para registras un dispositivo, primero hay que añadir una aplicación.
+
+<img src="./images/ttn-add-application.png" width="500" align="right" />
+
+En la consola, selecciona _APPLICATION_ y pulsa _add application_ en la siguiente pantalla. 
+- Para el _Application ID_, elige un identificador único, en minúsculas, puedes usar caracteres alfanuméricos peor no guiones ´-´ consecutivos.
+- Para  _Description_, elige la descripcion que prefieras.
+- No hace falta poner nada en _Application EUI_ 
+- En _Handler registration_ deja el valor predeterminado: ttn-handler-eu
+- Presiona _Add Application_ para finalizar
+
+Ahora seremos redirigidos a la página con la nueva aplicación añadida donde puedes encontrar la _app EUI_ y el _Access Keys_ generados.
+<br>
+<img src="./images/ttn-application.png" width="600" align="center" />
+
+### Registro del dispositivo
+
+<img src="./images/ttn-add-device.png" width="400" align="right" />
+
+En TTN un dispositivo (devide) representa la configuración de lo que también llama nodo (node) que a fin de cuentas es nuestro circuito. 
+Al acceder al formulario de registro, únicamente tenemos que rellenar el _Device ID_ que será el nombre único de este nodo. Es preferible pulsar el icono marcado en la imagen para que se genere automáticamente el _Device EUI_.
+
+<img src="./images/ttn-add-device_params.png" width="400" align="left" />
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+Finalmente pulsaremos _Register_ y pulsaremos el icono con el nombre de nuestro nuevo dispositivo para ver sus datos de configuración. Aquí encontraremos los parámetros que necesitamos por ser un dispositivo de tipo ABP. Y que tendremos que pasar al fichero de configuración settings.h que se cargará en el _sketch_ del IDE de Arduino.
+Pero el formato para las Keys es diferente. Encontrarás aquí una hoja excel (Encode_EUI.xlsx) que te facilitará esta tarea.
+
+```
+// TTN Configuration
+// LoRaWAN NwkSKey, network session key provided by TTN Console (https://console.thethingsnetwork.org) in Device settings form:
+static const PROGMEM u1_t NWKSKEY[16] = {0x8F,0xDA,......};
+// LoRaWAN AppSKey, application session key provided by TTN Console (https://console.thethingsnetwork.org) in Device settings form:
+static const u1_t PROGMEM APPSKEY[16] = {0xE5,0x0A,......};
+// LoRaWAN end-device address (DevAddr)
+static const u4_t DEVADDR = 0x12345678 ; // <-- Change this address for every node!
+
+// Other params
+const int update_time_alive = 150000;
+const int PhotoCell = 2; 
+const int Buzzer = 15;
+```
+
+### Formato de la trama
+<img src="./images/ttn-add-payload_format.png" width="400" align="right" />
+
+Tendremos que volver a la pantalla de _Application Overbiew_ para hacer una última configuración. Pulsando en la pestaña de _Payload Formats_ accedemos al formulario donde se permite poner un script para decodificar la trama de datos de nuestro mensaje LoRa. En nuestro caso este es el formato:
+
+
+
 ## Ejercicio 2: Sensor de movimiento
 
 ## Ejercicio 3: Alertas en el el móvil.
 
-La forma más fácil y _Maker_ para llevar los mensajes de este dispositivo a nuestro móvil. Es utilizar los servicios de 
+La forma más fácil y _Maker_ para llevar los mensajes de este dispositivo a nuestro móvil. Es utilizar los servicios de IFTTT (If This Then That) 
