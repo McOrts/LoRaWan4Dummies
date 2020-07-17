@@ -24,11 +24,11 @@ Si quieres participar plenamente en este taller y llevarte tu sensor funcionando
 
 Estamos hablando de un tipo de comunicación inalámbrica que permite transmitir datos a muy larga distancia y con bajo consumo de energía (~100mW). Es ideal para pequeños dispositivos que solo necesitan enviar información discreta como un dato de temperatura o una posición PGS.
 
-La señal LoRa alcanza fácilmente los 2km en área urbana y más de 10km en zonas rurales. Actualmente el récord tierra-tierra es de 210km con una shield de Arduino de 16$ (febrero 2017) y globo-tierra 832km a principios del 2020 desde Alemania a Países Bajos.
-
 <img src="images/LoRa-logo-transp-400x231-300x173.png" width="100" align="left"/>
 
 LoRa es un tipo de modulación de señal de radio desarrollada entre 2008 y 2013 en Francia y adquirida y patentada por la compañía Semtech.
+
+La señal LoRa alcanza fácilmente los 2km en área urbana y más de 10km en zonas rurales. Actualmente el récord tierra-tierra es de 210km con una shield de Arduino de 16$ (febrero 2017) y globo-tierra 832km a principios del 2020 desde Alemania a Países Bajos.
 
 ### ¿Por qué TTN?
 <img src="images/ttn_logo.png" width="100" align="left"/>
@@ -41,7 +41,7 @@ La vuelta de tuerca a esta solución de interconectividad de dispositivos la ha 
 ## 1º Conectamos todo
 
 La única aplicación que necesitaremos en el ordenador es un navegador de internet. Recomiendo Chrome. 
-Abrimos el buscador Google para encontrar la aplicación web: **Makecode Microbit** [La dirección actual es (https://makecode.microbit.org/](https://makecode.microbit.org/)
+Abrimos el buscador Google para encontrar la aplicación web: **Makecode Microbit** [La dirección actual es https://makecode.microbit.org/](https://makecode.microbit.org/)
 
 Una vez dentro de la aplicación podremos **cambiar el idioma** Desde el icono de configuración situado arriba a la derecha.
 <img src="./images/makecodemicrobitorg_home.png"  align="center" />
