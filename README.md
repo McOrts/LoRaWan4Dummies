@@ -38,6 +38,10 @@ La vuelta de tuerca a esta solución de interconectividad de dispositivos la ha 
 ### ¿Cómo funciona todo esto
 <img src="./images/Arquitectura_LoRaWAN.png"  align="center" />
 
+### ¿tengo cobertura?
+Existe un servicio que representa un mapa de alcance y intensidad de señal de los _gateways_ públicos de TTN. Se llama [TTNMapper](https://ttnmapper.org/) y hay una aplicación móvil detrás para hacer este mapeo de alcance.
+<img src="images/ttnmapper.png" align="center"/>
+
 ## 1º Conectamos todo
 
 La única aplicación que necesitaremos en el ordenador es un navegador de internet. Recomiendo Chrome. 
