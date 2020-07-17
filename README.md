@@ -137,7 +137,8 @@ Ahora ya podemos ver cómo llega la información al cloud de TTN con un formato 
 <img src="./images/data_device_holamundo.png" align="center" />
 
 ## Ejercicio 2: Sensor de movimiento
+Gracias a la facilidad de programación en Scratch, añadir el resto de sensores de Microbit es sencillo. Utilizaremos un canal para cada uno de los sensores a la vez que mostramos información de alguno de estos valores en la matriz de LEDs. Ahora no tendremos un contador de tiempo para hacer los envios si no un patrón de gesto detectado por el acelorómetro de la placa.
+<img src="./images/microbit-McOrts_BBC_MicroBit_Shake_Lora.png" align="center" />
 
 ## Ejercicio 3: Alertas en el el móvil.
-
 La forma más fácil y _Maker_ para llevar los mensajes de este dispositivo a nuestro móvil. Es utilizar los servicios de IFTTT (If This Then That).
