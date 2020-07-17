@@ -93,24 +93,45 @@ Ahora seremos redirigidos a la página con la nueva aplicación añadida donde p
 En TTN un dispositivo (devide) representa la configuración de lo que también llama nodo (node) que a fin de cuentas es nuestro circuito. 
 Al acceder al formulario de registro, únicamente tenemos que rellenar el _Device ID_ que será el nombre único de este nodo. Es preferible pulsar el icono marcado en la imagen para que se genere automáticamente el _Device EUI_.
 
-<img src="./images/ttn-add-device_settings.png" width="400" align="left" />
+<img src="./images/ttn-add-device_settings.png" width="400" align="right" />
+
 Ahora solo queda cambiar en _settings_ los parámetros de:
 * Poner a ABP el _Activation Method_
 * Desmarcar _Frame Counter Checks_
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <img src="./images/ttn-add-device_params.png" width="400" align="right" />
+
 Finalmente pulsaremos _Register_ y pulsaremos el icono con el nombre de nuestro nuevo dispositivo para ver sus datos de configuración. Aquí encontraremos los parámetros que necesitamos por ser un dispositivo de tipo ABP que trasladaremos al bloque de configuraciób de Scratch.
 
 En este punto debemos "Descargar" esta parte del programa en el Microbit para inicializar el dispositivo antes de añadir el bloque de datos a transmitir.
 
+<img src="./images/enviar_dispositivo_TTN.png" width="400" align="right" />
+
 ### Bloque de datos
 Ahora ya podemos añadir algo de información para transmitir:
-<img src="./images/enviar_dispositivo_TTN.png"  align="center" />
 
 ### Formato de la trama
 La información contenida en la transmisión (payload) está empaquetada en un formato que debemos identificar a fin de poder visualizar los datos contenidos en ella.
 las librería que hemos usado utiliza un formato estándar llamado Cayenne LPP. Que permite multiples canales de transmisión de datos simultaneos. Esto lo veremos en el siguiente ejercicio. Para esto, tendremos que volver a la configuración de aplicación y pulsando en la pestaña de _Payload Formats_ accedemos al formulario donde se permite cambiar esto:
-<img src="./images/formato_LPP.png" align="center" />
+<img src="./images/Formato_LPP.png" align="center" />
 
 Ahora ya podemos ver cómo llega la información al cloud de TTN con un formato legible donde veremos nuestro _Hola Mundo_ en forma de un 1 (Verdadero), tal y como pusimos en el bloque del programa:
 <img src="./images/data_device_holamundo.png" align="center" />
@@ -119,4 +140,4 @@ Ahora ya podemos ver cómo llega la información al cloud de TTN con un formato 
 
 ## Ejercicio 3: Alertas en el el móvil.
 
-La forma más fácil y _Maker_ para llevar los mensajes de este dispositivo a nuestro móvil. Es utilizar los servicios de IFTTT (If This Then That) 
+La forma más fácil y _Maker_ para llevar los mensajes de este dispositivo a nuestro móvil. Es utilizar los servicios de IFTTT (If This Then That).
