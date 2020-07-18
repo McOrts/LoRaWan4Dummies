@@ -69,7 +69,7 @@ Ahora ya podemos empezar a programar. Lo primero será añadir los proques para 
 ### Registro del sensor en la nube TTN
 Vamos a utilizar los servicios de TTN que enrutarán el mensaje desde el _gateway_ que reciba por radiofrecuencia el paquete de datos hasta el _endpoint_ que consumirá la aplicación que tome acción con la información contenida en la trama da datos. 
 
-Este dispositivo es del tipo ABP (Activation-by-personalisation) lo que significa que se identificará en la red con un _DevAddr_ y una _Session key_ preconfigurada. Para ello tenemos que completar el registro de una aplicación y un dispositivo. Estos son los pasos a seguir:
+Este dispositivo es del tipo ABP (Activation-by-personalisation) lo que significa que se identificará en la red con un _DevAddr_ y una _Session key_ preconfigurada. Para ello tenemos que completar el registro de una aplicación y un dispositivo. Previo, será necesario darse de alta en la [consola de la plataforma de TTN](https://console.thethingsnetwork.org/). Y luego, estos son los pasos a seguir:
 
 ### Registro de la aplicación
 Nuestro dispositivo se comunicará con la aplicación en la que ha sido registrado. Para registrar un dispositivo por lo tanto, primero hay que añadir una aplicación.
@@ -141,4 +141,6 @@ Gracias a la facilidad de programación en Scratch, añadir el resto de sensores
 <img src="./images/microbit-McOrts_BBC_MicroBit_Shake_Lora.png" align="center" />
 
 ## Ejercicio 3: Alertas en el el móvil.
-La forma más fácil y _Maker_ para llevar los mensajes de este dispositivo a nuestro móvil. Es utilizar los servicios de IFTTT (If This Then That).
+La forma más fácil y _Maker_ para llevar los mensajes de este dispositivo a nuestro móvil. Es utilizar los servicios de [IFTTT (If This Then That)](https://ifttt.com/). Para lo que tendremos, primero, que registrarnos.
+
+
